@@ -7,8 +7,12 @@ module.exports = {
   // note the "build" script in package.json needs to be modified as well.
   outputDir: '../../../public/assets/app',
 
-  publicPath: '/assets/app/',
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/assets/app/'
+    : '/',
 
   // modify the location of the generated HTML file.
-  indexPath: '../../../resources/views/app.blade.php'
+  indexPath: process.env.NODE_ENV === 'production'
+    ? '../../../resources/views/app.blade.php'
+    : 'index.html'
 }
