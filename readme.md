@@ -26,17 +26,21 @@ Example config your laravel project
     ``` js
     module.exports = {
      devServer: {
-       proxy: 'http://laravel58.test'
+       proxy: 'http://laravel.test'
      },
 
       // output built static files to Laravel's public dir.
       // note the "build" script in package.json needs to be modified as well.
       outputDir: '../../../public/assets/app',
 
-      publicPath: '/assets/app/',
+      publicPath: process.env.NODE_ENV === 'production'
+        ? '/assets/app/'
+        : '/',
 
       // modify the location of the generated HTML file.
-      indexPath: '../../../resources/views/app.blade.php'
+      indexPath: process.env.NODE_ENV === 'production'
+        ? '../../../resources/views/app.blade.php'
+        : 'index.html'
     }
     ```
     Edit `/resources/frontend/app/package.json`
@@ -55,18 +59,22 @@ Example config your laravel project
     module.exports = {
       // proxy API requests to Valet during development
       devServer: {
-        proxy: 'http://laravel58.test'
+        proxy: 'http://laravel.test/admin'
       },
 
       // output built static files to Laravel's public dir.
       // note the "build" script in package.json needs to be modified as well.
       outputDir: '../../../public/assets/admin',
 
-      publicPath: '/assets/admin/',
+      publicPath: process.env.NODE_ENV === 'production'
+        ? '/assets/admin/'
+        : '/admin',
 
       // modify the location of the generated HTML file.
       // make sure to do this only in production.
-      indexPath: '../../../resources/views/admin.blade.php'
+      indexPath: process.env.NODE_ENV === 'production'
+        ? '../../../resources/views/admin.blade.php'
+        : 'index.html'
     }
     ```
    
