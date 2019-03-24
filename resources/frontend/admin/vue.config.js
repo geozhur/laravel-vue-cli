@@ -1,4 +1,5 @@
 module.exports = {
+  productionSourceMap: false,
   // proxy API requests to Valet during development
   devServer: {
     proxy: 'http://laravel.test/admin'
