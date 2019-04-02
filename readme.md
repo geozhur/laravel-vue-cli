@@ -1,5 +1,6 @@
+<<<<<<< HEAD
 ## Laravel + Vue CLI 3
-Example config your laravel project
+Example config your Laravel project with two builds (public and admin)
 
 ## Steps for Scaffolding From Scratch
 1. Create Laravel Project
@@ -147,3 +148,4 @@ Example config your laravel project
       }
     }
     ```
+    
