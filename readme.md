@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Laravel + Vue CLI 3
 Example config your Laravel project with two builds (public and admin)
 
