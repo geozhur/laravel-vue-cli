@@ -127,7 +127,7 @@ Example config your Laravel project with two builds (public and admin)
     // For Admin
     base: '/admin/',
     ```
-6. Add `package.json` in root (if you want use `npm run` in root)
+6. Add `package.json` in root (if you want use `yarn run` in root)
     ``` js
     {
       "name": "laravel",
@@ -135,15 +135,15 @@ Example config your Laravel project with two builds (public and admin)
       "private": true,
       "scripts": {
         // For public application
-        "serve:app": "cd resources/frontend/app && npm run serve",
-        "build:app": "cd resources/frontend/app && npm run build",
-        "lint:app": "cd resources/frontend/app && npm run lint",
-        "test:app": "cd resources/frontend/app && npm run test:unit",
+        "serve:app": "cd resources/frontend/app && yarn run serve",
+        "build:app": "cd resources/frontend/app && yarn run build",
+        "lint:app": "cd resources/frontend/app && yarn run lint",
+        "test:app": "cd resources/frontend/app && yarn run test:unit",
         // For admin application
-        "serve:admin": "cd resources/frontend/admin && npm run serve",
-        "build:admin": "cd resources/frontend/admin && npm run build",
-        "lint:admin": "cd resources/frontend/admin && npm run lint",
-        "test:admin": "cd resources/frontend/admin && npm run test:unit"
+        "serve:admin": "cd resources/frontend/admin && yarn run serve",
+        "build:admin": "cd resources/frontend/admin && yarn run build",
+        "lint:admin": "cd resources/frontend/admin && yarn run lint",
+        "test:admin": "cd resources/frontend/admin && yarn run test:unit"
       }
     }
     ```

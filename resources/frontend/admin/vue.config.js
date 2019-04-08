@@ -1,5 +1,5 @@
 module.exports = {
-  productionSourceMap: false,
+  // proxy API requests to Valet during development
   devServer: {
     proxy: 'http://laravel.test/admin'
   },
@@ -8,8 +8,6 @@ module.exports = {
   // note the "build" script in package.json needs to be modified as well.
   outputDir: '../../../public/assets/admin',
 
-  // modify the location of the generated js/css/ims files.
-  // make sure to do this only in production.
   publicPath: process.env.NODE_ENV === 'production'
     ? '/assets/admin/'
     : '/admin',
