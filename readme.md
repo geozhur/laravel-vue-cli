@@ -147,4 +147,3 @@ Example config your Laravel project with two builds (public and admin)
       }
     }
     ```
-    
