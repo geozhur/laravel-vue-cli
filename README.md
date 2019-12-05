@@ -1,4 +1,4 @@
-## Laravel + Vue CLI 3
+## Laravel 6 + Vue CLI 4
 Example config your Laravel project with two builds (public and admin)
 
 ## Steps for Scaffolding From Scratch
@@ -11,7 +11,7 @@ Example config your Laravel project with two builds (public and admin)
    rm -rf package.json webpack.mix.js yarn.lock resources/js resources/sass public/js public/css
    ```
 
-2. Create a Vue CLI 3 project in the Laravel '/resources/frontend/'
+2. Create a Vue CLI 4 project in the Laravel '/resources/frontend/'
    ``` sh
    cd resources/frontend
    vue create app
@@ -19,7 +19,7 @@ Example config your Laravel project with two builds (public and admin)
    vue create admin
    ```
 
-3. Configure Vue CLI 3 project
+3. Configure Vue CLI 4 project
 
     Create `/resources/frontend/app/vue.config.js`:
 
@@ -131,7 +131,7 @@ Example config your Laravel project with two builds (public and admin)
     ``` js
     {
       "name": "laravel",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "private": true,
       "scripts": {
         // For public application
